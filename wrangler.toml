@@ -1,0 +1,10 @@
+# Cloudflare Pages project for vakastudio.com
+name = "vakastudio"
+compatibility_date = "2026-09-01"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "vakastudio-waitlist"
+database_id = "19244f3a-951e-4919-af25-a40c3dbac7e1"
+migrations_dir = "migrations"

@@ -1,0 +1,17 @@
+{
+  "name": "vakastudio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "db:local": "wrangler d1 migrations apply vakastudio-waitlist --local",
+    "dev": "node build.mjs && wrangler pages dev --port 8788",
+    "waitlist:local": "wrangler d1 execute vakastudio-waitlist --local --command \"SELECT app, email, source, created_at FROM waitlist ORDER BY created_at\"",
+    "deploy": "node build.mjs && wrangler pages deploy dist --project-name vakastudio --branch main",
+    "waitlist": "wrangler d1 execute vakastudio-waitlist --remote --command \"SELECT app, email, source, created_at FROM waitlist ORDER BY created_at\""
+  },
+  "devDependencies": {
+    "@fontsource/geist": "^5.3.0",
+    "wrangler": "^4.0.0"
+  }
+}

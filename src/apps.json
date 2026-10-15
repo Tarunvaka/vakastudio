@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "lastmark",
+    "name": "LastMark",
+    "tagline": "Count the days since anything.",
+    "blurb": "Last haircut, last call home, last time the bedsheets got changed. See how long it’s been at a glance, reset with one tap.",
+    "icon": "/assets/img/lastmark-icon.svg",
+    "status": "soon",
+    "appStore": "",
+    "ctaHeading": "Know how long it’s been."
+  }
+]
