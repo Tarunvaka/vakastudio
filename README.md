@@ -1,31 +1,38 @@
 # vakastudio.com
 
-Static site for Vaka Studio on Cloudflare Pages, plus one Pages Function for app waitlists.
+React site for Vaka Studio, prerendered to static HTML and served by Cloudflare Pages, plus one Pages Function for app waitlists.
 
 ```
-src/apps.json        every app: slug, name, tagline, icon, status ("soon" | "live"), App Store link
-src/pages/           pages; x/index.html is served at /x (no trailing slash)
-src/partials/        shared markup (head, nav, footer, LastMark sections)
-src/assets/          site.css, site.js, theme.js, images
+src/design/          React components GENERATED from the design project (do not edit; re-import)
+src/routes.jsx       every page: URL, output file, title, description
+src/entry-server.jsx renders a page to HTML at build time
+src/entry-client.jsx hydrates the page in the browser (FAQ toggles, waitlist form)
+src/waitlist.js      the waitlist form's submit handler (POST /api/waitlist)
+src/styles.css       global styles and the self-hosted Bricolage Grotesque font
+src/apps.json        every app: slug, name, status ("soon" | "live"), App Store link
 functions/api/       POST /api/waitlist (D1 binding DB); open for every app with status "soon"
-migrations/          D1 schema
-scripts/frame.py     puts simulator screenshots into Apple's iPhone frame
-build.mjs            src -> dist (fills partials, apps grid, closing cards, sitemap)
+scripts/import-design.mjs  design .dc.html files -> src/design/*.jsx
+scripts/prerender.mjs      writes dist/<page>.html and sitemap.xml after the Vite builds
 ```
 
+## Commands
 ```bash
 npm install
-npm run db:local      # create the local waitlist tables (once)
-npm run dev           # build + serve on http://localhost:8788
-npm run waitlist:local
-npm run deploy        # build and publish to Cloudflare Pages (run `npx wrangler login` once first)
-npm run waitlist      # read the live waitlist
+npm run dev            # Vite dev server (pages only, no waitlist API)
+npm run preview        # full build + local Cloudflare server with the waitlist API on :8788
+npm run db:local       # create the local waitlist tables (once)
+npm run build          # dist/ ready to publish
+npm run deploy         # build and publish from this machine
+npm run waitlist       # read the live waitlist
 ```
 
-## Adding an app
-1. Add an entry to `src/apps.json` with `"status": "soon"`. The home and studio "Our apps" grids and the waitlist pick it up.
-2. Copy `src/pages/lastmark/` to `src/pages/<slug>/` (landing, support, privacy) and edit the copy. Use `<!-- @get <slug> -->` for the closing card.
-3. Screenshots: capture from the simulator, then `scripts/frame.py` (see its header).
-4. Launch day: set `"status": "live"` and `"appStore"`. Every waitlist card for that app becomes an App Store button.
+## Updating the design
+1. Download the design project's `.dc.html` files into `../design-import/`.
+2. `npm run import-design` regenerates `src/design/`.
+3. `npm run preview`, check, then commit and push.
 
-Design rule: nothing moves unless the visitor hovers, clicks or scrolls.
+## Publishing
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds and publishes to Cloudflare Pages.
+It needs the repository secret `CLOUDFLARE_API_TOKEN` (a Cloudflare API token with "Cloudflare Pages: Edit").
+
+Design rule: nothing moves unless the visitor clicks or scrolls.
