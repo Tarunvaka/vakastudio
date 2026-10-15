@@ -10,10 +10,73 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; background: #F3EDE2; font-family: "Bricolage Grotesque", system-ui, sans-serif; color: #16130F; -webkit-font-smoothing: antialiased; font-optical-sizing: auto; }
 a { color: inherit; text-decoration: none; }
-a:hover { color: #C8360F; }
 * { box-sizing: border-box; }
 input::placeholder { color: #A0968A; }
 :focus-visible { outline: 3px solid #FF4B1F; outline-offset: 3px; border-radius: 12px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.001ms !important; } }
 /* On phones the design's header wraps to three rows; let it scroll away instead of covering a quarter of the screen. */
 @media (max-width: 720px) { #root header { position: static !important; } }
+
+/* ---------- Micro-interactions (only on hover, focus or press) ----------
+   The design's elements carry inline styles, so these target them by the shape of their style. */
+:root { --ease-out: cubic-bezier(0.22, 1, 0.36, 1); --ink: #16130F; --cream: #F3EDE2; }
+a, [role="button"], button { -webkit-tap-highlight-color: transparent; }
+a svg { transition: transform 0.3s var(--ease-out); }
+
+/* Filled buttons: lift, soft shadow, icon nudges */
+a[style*="height:"][style*="background:"]:not([style*="min-height:"]), button[type="submit"] {
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), filter 0.2s;
+}
+a[style*="height:"][style*="background:"]:not([style*="min-height:"]):hover, button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -14px rgba(22, 19, 15, 0.55);
+}
+a[style*="height:"][style*="background:"]:not([style*="min-height:"]):hover svg, button[type="submit"]:hover svg { transform: translate(1px, -2px) rotate(-6deg); }
+
+/* Outline buttons: fill with ink */
+a[style*="border:2px solid"] {
+  transition: background-color 0.22s var(--ease-out), color 0.22s var(--ease-out), transform 0.25s var(--ease-out);
+}
+a[style*="border:2px solid"]:hover { background-color: var(--ink); color: var(--cream) !important; transform: translateY(-1px); }
+
+/* Nav links: soft pill */
+header nav a { transition: background-color 0.2s var(--ease-out); }
+header nav a:not([style*="background:"]):hover { background-color: rgba(22, 19, 15, 0.06); }
+
+/* Card links (app tiles): lift */
+a[style*="min-height:"][style*="border-radius:"] { transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out); }
+a[style*="min-height:"][style*="border-radius:"]:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -26px rgba(22, 19, 15, 0.5); }
+
+/* Press: sink a touch */
+a[style*="height:"]:active, a[style*="min-height:"]:active, button[type="submit"]:active {
+  transform: translateY(0) scale(0.97); transition-duration: 0.08s;
+}
+
+/* Footer and plain text links: underline slides in */
+footer a:not([style*="height:"]):not([style*="text-decoration:underline"]) {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat;
+  transition: background-size 0.3s var(--ease-out), color 0.2s;
+}
+footer a:not([style*="height:"]):not([style*="text-decoration:underline"]):hover { background-size: 100% 2px; }
+
+/* Already-underlined accent links: underline tightens */
+a[style*="text-decoration:underline"] { transition: text-underline-offset 0.25s var(--ease-out), color 0.2s; }
+a[style*="text-decoration:underline"]:hover { text-underline-offset: 2px !important; color: var(--ink) !important; }
+
+/* Logo: the four squares round off */
+header a[href="/"] > span:first-child > span { transition: border-radius 0.35s var(--ease-out), transform 0.35s var(--ease-out); }
+header a[href="/"]:hover > span:first-child > span { border-radius: 50% !important; }
+header a[href="/"]:hover > span:first-child > span:nth-child(2) { transform: rotate(90deg) scale(1.1); }
+
+/* FAQ rows: brighten and lift slightly */
+[role="button"] { transition: background-color 0.2s, box-shadow 0.25s var(--ease-out); }
+[role="button"]:hover { box-shadow: 0 0 0 2px rgba(22, 19, 15, 0.08), 0 10px 24px -18px rgba(22, 19, 15, 0.45); }
+[role="button"] span[style*="transform:rotate"] { transition: transform 0.3s var(--ease-out), background-color 0.2s !important; }
+
+/* Inputs: focus glow */
+input[type="email"] { transition: box-shadow 0.2s var(--ease-out); }
+input[type="email"]:focus { box-shadow: 0 0 0 3px rgba(255, 75, 31, 0.55); }
+
+@media (hover: none) {
+  a[style*="height:"][style*="background:"]:not([style*="min-height:"]):hover, a[style*="min-height:"]:hover, a[style*="border:2px solid"]:hover { transform: none; box-shadow: none; }
+}
