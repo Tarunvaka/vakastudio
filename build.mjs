@@ -27,7 +27,6 @@ for (const w of [400, 500]) {
 const v = createHash("sha256")
   .update(readFileSync(join(SRC, "assets", "site.css")))
   .update(readFileSync(join(SRC, "assets", "site.js")))
-  .update(readFileSync(join(SRC, "assets", "theme.js")))
   .digest("hex").slice(0, 10);
 
 const partials = Object.fromEntries(
@@ -64,7 +63,6 @@ const getCard = (slug) => {
       </form>`;
   return `<section class="wrap" id="get" aria-labelledby="get-h">
     <div class="sky cta">
-      <div class="stars" aria-hidden="true"></div>
       <img class="cta-icon" src="${a.icon}" alt="" width="72" height="72">
       <span class="tag">${a.status === "live" ? "Free on iPhone" : "Coming soon to iPhone"}</span>
       <h2 class="h2" id="get-h">${esc(a.ctaHeading)}</h2>

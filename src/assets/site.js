@@ -1,18 +1,21 @@
 /* Vaka Studio home. No dependencies, no tracking, nothing moves on its own. */
 (() => {
-  const root = document.documentElement;
-
-  // ---------- Theme toggle (follows the system until the visitor picks one) ----------
-  const btn = document.querySelector(".theme");
-  const current = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  const label = () => btn && btn.setAttribute("aria-label", current() === "dark" ? "Switch to light theme" : "Switch to dark theme");
-  label();
-  btn?.addEventListener("click", () => {
-    const next = current() === "dark" ? "light" : "dark";
-    root.dataset.theme = next;
-    try { localStorage.setItem("vs-theme", next); } catch (_) { /* not saved, still switches */ }
-    label();
+  // ---------- Nav: mark the current page, mobile menu ----------
+  const here = location.pathname.replace(/\/$/, "") || "/";
+  document.querySelectorAll(".links a, .menu a:not(.btn)").forEach((a) => {
+    const path = new URL(a.href, location.href).pathname.replace(/\/$/, "") || "/";
+    if (a.origin === location.origin && path === here) a.setAttribute("aria-current", "page");
   });
+  const nav = document.querySelector(".nav");
+  const menuBtn = nav?.querySelector(".menu-btn");
+  const setMenu = (open) => {
+    nav.classList.toggle("open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+  menuBtn?.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+  nav?.querySelectorAll(".menu a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav?.classList.contains("open")) { setMenu(false); menuBtn.focus(); } });
 
   // ---------- Waitlist ----------
   const refKey = "vs-ref";
