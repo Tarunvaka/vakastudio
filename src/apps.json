@@ -8,5 +8,15 @@
     "status": "soon",
     "appStore": "",
     "ctaHeading": "Know how long it’s been."
+  },
+  {
+    "slug": "foretoken",
+    "name": "Foretoken",
+    "tagline": "What just happened in AI, in one glance.",
+    "blurb": "AI news as short visual cards, minutes after the source publishes, plus display-only forecasts for what happens next.",
+    "icon": "",
+    "status": "soon",
+    "appStore": "",
+    "ctaHeading": "Be first to know."
   }
 ]

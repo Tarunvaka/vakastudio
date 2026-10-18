@@ -5,6 +5,8 @@ import SupportPage from "./design/SupportPage.jsx";
 import PrivacyPage from "./design/PrivacyPage.jsx";
 import StudioPage from "./design/StudioPage.jsx";
 import NotFoundPage from "./design/NotFoundPage.jsx";
+import ForetokenPage from "./pages/ForetokenPage.jsx";
+import ForetokenBotPage from "./pages/ForetokenBotPage.jsx";
 
 export const routes = [
   { id: "home", path: "/", file: "index.html", Page: HomePage,
@@ -19,6 +21,12 @@ export const routes = [
   { id: "privacy", path: "/lastmark/privacy", file: "lastmark/privacy.html", Page: PrivacyPage,
     title: "LastMark Privacy Policy · Vaka Studio",
     desc: "LastMark collects no data. Everything you add stays on your iPhone. This policy also covers the vakastudio.com waitlist." },
+  { id: "foretoken", path: "/foretoken", file: "foretoken.html", Page: ForetokenPage,
+    title: "Foretoken · What just happened in AI",
+    desc: "Foretoken shows what just happened in AI as short visual cards, minutes after the source publishes, plus display-only forecasts for what happens next. Coming soon to iPhone." },
+  { id: "foretoken-bot", path: "/foretoken/bot", file: "foretoken/bot.html", Page: ForetokenBotPage,
+    title: "ForetokenBot · Vaka Studio",
+    desc: "ForetokenBot reads public AI news feeds for the Foretoken app. What it reads, how often, robots.txt and how to block it." },
   { id: "studio", path: "/studio", file: "studio.html", Page: StudioPage,
     title: "Studio · Vaka Studio",
     desc: "Vaka Studio is a small, independent studio making calm iPhone apps that do one thing well." },
