@@ -14,7 +14,7 @@ export const routes = [
     desc: "Vaka Studio makes calm, simple iPhone apps that do one thing well. Meet LastMark: count the days since anything." },
   { id: "lastmark", path: "/lastmark", file: "lastmark.html", Page: LastMarkPage,
     title: "LastMark · Count the days since anything",
-    desc: "LastMark counts the days since you last did something, and resets to today with one tap. No account, no tracking. Coming soon to iPhone." },
+    desc: "LastMark counts the days since you last did something, and resets to today with one tap. No account, no tracking. Free on the App Store for iPhone." },
   { id: "support", path: "/lastmark/support", file: "lastmark/support.html", Page: SupportPage,
     title: "LastMark Support · Vaka Studio",
     desc: "Help with LastMark: resetting items, Undo, past dates, widgets and more. Contact support@vakastudio.com." },
