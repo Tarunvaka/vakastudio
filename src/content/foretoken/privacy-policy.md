@@ -1,6 +1,6 @@
 # Foretoken Privacy Policy
 
-Version 1.0 · Effective [EFFECTIVE DATE]
+Version 1.0 · Effective November 6, 2026
 
 ## Summary
 
@@ -21,11 +21,11 @@ play-money forecasting site.
 
 ## Who we are
 
-Foretoken is operated by [OPERATOR NAME], [ADDRESS] ("we", "us"). We are the data controller for the
+Foretoken is operated by Nageswararao Vaka, Palakol, Andhra Pradesh, India ("we", "us"). We are the data controller for the
 personal data described here, and the "Data Fiduciary" under India's Digital Personal Data Protection
 Act, 2023.
 
-Contact for all privacy questions and requests: **[CONTACT EMAIL]**.
+Contact for all privacy questions and requests: **support@vakastudio.com**.
 
 ## Data we collect
 
@@ -38,7 +38,7 @@ Contact for all privacy questions and requests: **[CONTACT EMAIL]**.
 | Today in AI progress, streaks and which recaps you have seen | To show Today, your streak and recaps | Yes |
 | Alert settings: alert types, daily limit, quiet hours, keywords | To decide which alerts to send you and when | Yes |
 | Time zone | To respect your quiet hours and daily alert limit | Yes |
-| App Store country, device region setting and the region we derive (United States or India) | To apply the right regional rules to content and prices | Yes |
+| App Store country, device region setting and the region we derive (India, or United States rules for every other country) | To apply the right regional rules to content and prices | Yes |
 | Push token, push environment, app version and iOS version | To deliver alerts through Apple's push service | Yes |
 | Notification history: which stories and other notifications we sent you, and when you read or opened them | To show your notifications inbox and apply your daily limit | Yes |
 | Email address, if you sign in with an email code | To sign you in | Yes |
@@ -208,7 +208,7 @@ for any advertising.
 You can delete your data at any time:
 
 - **In the app:** Profile > **Delete account** (signed in) or **Delete my data** (guest), then confirm.
-- **By email:** write to [CONTACT EMAIL] from the address you sign in with, or include the Support ID from
+- **By email:** write to support@vakastudio.com from the address you sign in with, or include the Support ID from
   Profile > Copy support ID.
 
 When you delete, we remove your account data from our database immediately: follows, saves, alert
@@ -232,14 +232,17 @@ Foretoken, contact us and we will delete the data.
 
 Depending on where you live, you may have the right to access, correct, delete or receive a copy of your
 personal data, to object to or restrict some processing, and to withdraw consent. To use any of these
-rights, email [CONTACT EMAIL]. We answer within 30 days. We may ask you to confirm that the account is
+rights, email support@vakastudio.com. We answer within 30 days. We may ask you to confirm that the account is
 yours (for example by writing from your sign-in email or sending your Support ID).
 
 - **India (DPDP Act, 2023):** you may access a summary of your data, correct or erase it, nominate another
-  person to exercise your rights, and raise a grievance. Grievance contact: [OPERATOR NAME],
-  [CONTACT EMAIL]. If you are not satisfied with our answer, you may complain to the Data Protection
+  person to exercise your rights, and raise a grievance. Grievance contact: Nageswararao Vaka,
+  support@vakastudio.com. If you are not satisfied with our answer, you may complain to the Data Protection
   Board of India.
 - **EU, EEA and UK (GDPR):** you may also complain to your local data protection authority.
+- **UK (UK GDPR), Australia (Privacy Act 1988) and the other countries where Foretoken is available:** you
+  have the same rights to access and delete your data and to contact us at support@vakastudio.com, and you may
+  complain to your local privacy regulator (in the UK, the ICO; in Australia, the OAIC).
 - **California and other US states:** we do not sell or share personal information, and we do not use
   sensitive personal information to infer characteristics about you. You will not be treated differently
   for using your rights. An authorized agent may make a request for you with your written permission.
@@ -258,4 +261,4 @@ tell you in the app before the change takes effect.
 
 ## Contact
 
-[OPERATOR NAME] · [ADDRESS] · [CONTACT EMAIL]
+Nageswararao Vaka · Palakol, Andhra Pradesh, India · support@vakastudio.com

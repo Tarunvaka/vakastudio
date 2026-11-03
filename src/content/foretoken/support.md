@@ -1,6 +1,6 @@
 # Foretoken Support
 
-Email **[CONTACT EMAIL]**. We reply within 3 business days.
+Email **support@vakastudio.com**. We reply within 3 business days.
 
 To help us find your account, include your Support ID: in the app, open Profile and tap
 **Copy support ID**, then paste it into your email. Never send us passwords or sign-in codes.
@@ -77,7 +77,7 @@ sign-in. It cannot be undone.
 **Deleting your account does not cancel Premium**: cancel it in Settings first if you do not want to be
 charged again.
 
-You can also email [CONTACT EMAIL] from the address you sign in with (or with your Support ID) and
+You can also email support@vakastudio.com from the address you sign in with (or with your Support ID) and
 we will delete your data within 30 days.
 
 **Reset my interests**
@@ -87,7 +87,7 @@ from the companies you follow. In the Live tab's **For you** list, a story's **M
 order.
 
 **Get a copy of your data, or correct it**
-Email [CONTACT EMAIL]. We answer within 30 days. Our Privacy Policy explains what we keep:
+Email support@vakastudio.com. We answer within 30 days. Our Privacy Policy explains what we keep:
 https://vakastudio.com/foretoken/privacy.
 
 ## Report a problem with a story
