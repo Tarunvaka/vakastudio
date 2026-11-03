@@ -1,9 +1,9 @@
 # Foretoken Terms of Use
 
-Version 1.0 · Effective [EFFECTIVE DATE]
+Version 1.0 · Effective November 6, 2026
 
 These Terms of Use ("Terms") govern your use of the Foretoken iPhone app and its web pages
-("Foretoken"). Foretoken is operated by [OPERATOR NAME], [ADDRESS] ("we", "us"). Contact: **[CONTACT EMAIL]**.
+("Foretoken"). Foretoken is operated by Nageswararao Vaka, Palakol, Andhra Pradesh, India ("we", "us"). Contact: **support@vakastudio.com**.
 
 By downloading or using Foretoken you agree to these Terms and to our Privacy Policy
 (https://vakastudio.com/foretoken/privacy). If you do not agree, do not use Foretoken.
@@ -128,7 +128,7 @@ The Foretoken app, its design, name and our own summaries belong to us. Headline
 written in our own words. Images, forecasts and linked articles belong to their owners and are
 credited or linked to their sources; Foretoken is not affiliated with or endorsed by the companies,
 sources or forecasting sites it mentions, and their names and marks belong to them. If you believe content in
-Foretoken infringes your rights, email [CONTACT EMAIL] with the details and we will respond
+Foretoken infringes your rights, email support@vakastudio.com with the details and we will respond
 promptly.
 
 You may share story cards with the share button for personal, non-commercial use.
@@ -174,12 +174,12 @@ laws where you live.
 
 ## 15. Governing law and disputes
 
-These Terms are governed by the laws of the place where [OPERATOR NAME] is established ([ADDRESS]),
+These Terms are governed by the laws of the place where Nageswararao Vaka is established (Palakol, Andhra Pradesh, India),
 without regard to conflict-of-law rules. The competent courts of that place have exclusive jurisdiction
 over any dispute relating to these Terms or Foretoken, except that, if you are a consumer, you keep any right to bring a
 claim in the courts where you live and the protection of the mandatory laws of your country.
 
-Before starting a claim, please email [CONTACT EMAIL] so we can try to resolve it informally.
+Before starting a claim, please email support@vakastudio.com so we can try to resolve it informally.
 
 ## 16. General
 
@@ -190,4 +190,4 @@ the entire agreement between you and us about Foretoken.
 
 ## 17. Contact
 
-[OPERATOR NAME] · [ADDRESS] · [CONTACT EMAIL]
+Nageswararao Vaka · Palakol, Andhra Pradesh, India · support@vakastudio.com
