@@ -42,7 +42,7 @@ export function FtHeader({ active }) {
 
 export function FtFooter() {
   const cols = [
-    { h: "Foretoken", links: [{ t: "Overview", href: "/foretoken" }, { t: "Waitlist", href: "/foretoken#get" }, { t: "ForetokenBot", href: "/foretoken/bot" }] },
+    { h: "Foretoken", links: [{ t: "Overview", href: "/foretoken" }, { t: "Waitlist", href: "/foretoken#get" }, { t: "ForetokenBot", href: "/foretoken/bot" }, { t: "Support", href: "/foretoken/support" }, { t: "Privacy", href: "/foretoken/privacy" }, { t: "Terms", href: "/foretoken/terms" }] },
     { h: "Apps", links: [{ t: "LastMark", href: "/lastmark" }, { t: "All apps", href: "/#apps" }] },
     { h: "Studio", links: [{ t: "About", href: "/studio" }, { t: "Contact", href: "mailto:support@vakastudio.com" }] },
   ];

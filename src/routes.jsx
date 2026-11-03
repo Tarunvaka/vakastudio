@@ -7,6 +7,7 @@ import StudioPage from "./design/StudioPage.jsx";
 import NotFoundPage from "./design/NotFoundPage.jsx";
 import ForetokenPage from "./pages/ForetokenPage.jsx";
 import ForetokenBotPage from "./pages/ForetokenBotPage.jsx";
+import { ForetokenPrivacyPage, ForetokenTermsPage, ForetokenSupportPage } from "./pages/ForetokenDocPage.jsx";
 
 export const routes = [
   { id: "home", path: "/", file: "index.html", Page: HomePage,
@@ -27,6 +28,16 @@ export const routes = [
   { id: "foretoken-bot", path: "/foretoken/bot", file: "foretoken/bot.html", Page: ForetokenBotPage,
     title: "ForetokenBot · Vaka Studio",
     desc: "ForetokenBot reads public AI news feeds for the Foretoken app. What it reads, how often, robots.txt and how to block it." },
+  // Operator details (name, address, contact) are still placeholders: noindex until they are filled in.
+  { id: "foretoken-privacy", path: "/foretoken/privacy", file: "foretoken/privacy.html", Page: ForetokenPrivacyPage, noindex: true,
+    title: "Foretoken Privacy Policy · Vaka Studio",
+    desc: "What Foretoken collects, why, who processes it, how long it is kept and how to delete it. No ads, no tracking, no sale of data." },
+  { id: "foretoken-terms", path: "/foretoken/terms", file: "foretoken/terms.html", Page: ForetokenTermsPage, noindex: true,
+    title: "Foretoken Terms of Use · Vaka Studio",
+    desc: "Terms of use for Foretoken, including Premium auto-renewing subscriptions and display-only play-money forecasts." },
+  { id: "foretoken-support", path: "/foretoken/support", file: "foretoken/support.html", Page: ForetokenSupportPage, noindex: true,
+    title: "Foretoken Support · Vaka Studio",
+    desc: "Help with Foretoken: alerts, forecasts, plans and trials, restoring purchases and deleting your data." },
   { id: "studio", path: "/studio", file: "studio.html", Page: StudioPage,
     title: "Studio · Vaka Studio",
     desc: "Vaka Studio is a small, independent studio making calm iPhone apps that do one thing well." },
