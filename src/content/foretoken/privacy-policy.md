@@ -10,7 +10,7 @@ play-money forecasting site.
 - You can use Foretoken without signing in. The app creates an anonymous guest account on first launch.
 - We collect what the app needs to work: your account id, your follows, saves and alert settings, what
   you read in the app (to rank stories for you), your time zone and App Store country, your push token
-  and, if you sign in, your email or Apple sign-in details. If you subscribe, we keep a record of your
+  and, if you sign in, your email or your Apple or Google sign-in details. If you subscribe, we keep a record of your
   subscription.
 - We do not show ads. We do not track you across other companies' apps or websites. We do not use the
   advertising identifier (IDFA). We do not sell or share your personal data for advertising.
@@ -43,6 +43,7 @@ Contact for all privacy questions and requests: **support@vakastudio.com**.
 | Notification history: which stories and other notifications we sent you, and when you read or opened them | To show your notifications inbox and apply your daily limit | Yes |
 | Email address, if you sign in with an email code | To sign you in | Yes |
 | Apple user identifier and the email Apple shares with us (your real address or a private relay address), if you use Sign in with Apple | To sign you in | Yes |
+| Google account identifier, email address, name and profile picture link that Google shares with us, if you use Continue with Google | To sign you in (we do not show or otherwise use your name or picture) | Yes |
 | Sign in with Apple refresh token, stored encrypted | Only to revoke Foretoken's access at Apple when you delete your account | Yes |
 | Subscription records, if you subscribe: product, status, renewal and expiry dates, trial details, App Store country and Apple's transaction identifiers; trial events (for example "reminder sent"); offer codes you redeem | To confirm your Premium access, send your trial reminder and count offer campaigns | Yes |
 | Referral code and referral status, if referrals are offered and you use them | To give both people the referral reward | Yes |
@@ -50,7 +51,7 @@ Contact for all privacy questions and requests: **support@vakastudio.com**.
 | Crash and performance reports: technical details such as the error, device model, iOS and app version | To find and fix bugs | No |
 | Anonymous usage events, such as "app opened", "story shared" or "paywall shown", with fixed values only | To understand which features are used | No |
 
-We do not collect your name, phone number, postal address, contacts, photos, precise or approximate
+We do not collect your name (except the name Google shares if you choose Continue with Google), phone number, postal address, contacts, photos, precise or approximate
 location, browsing history, search history, health data or payment card details.
 
 Please do not put personal information in a story report note.
@@ -91,9 +92,15 @@ Apple's in-app browser, and that site's own privacy policy applies.
 
 - **Guest account.** On first launch the app signs in anonymously with Supabase, our sign-in provider.
   Your follows, saves, settings and subscription belong to this guest account.
-- **Signing in is optional.** You can sign in with Apple or with a one-time code sent to your email. With
-  Sign in with Apple we ask only for your email address, never your name, and you can choose Apple's
-  Hide My Email. Email codes are delivered by Resend.
+- **Signing in is optional.** You can sign in with Apple, continue with Google or use a one-time code sent
+  to your email. With Sign in with Apple we ask only for your email address, never your name, and you can
+  choose Apple's Hide My Email. Email codes are delivered by Resend.
+- **Continue with Google.** Google shares your Google account identifier, email address, name and profile
+  picture link with us; Supabase stores them with your sign-in record. We ask Google for nothing else
+  (no contacts, Drive, Gmail or other Google data), and we do not keep Google access or refresh tokens:
+  the app hands Google's sign-in token to Supabase once and then discards it. You can also remove
+  Foretoken's access in your Google Account (Security > Your connections to third-party apps &
+  services).
 - **Moving guest data.** When you sign in, your guest data moves into your account. If you already have an
   account (for example on another device), we merge the guest's data into it, and the guest record is
   removed 30 days later.
@@ -164,6 +171,7 @@ for the purpose listed.
 | Supabase | Database and sign-in | Amazon Web Services, Stockholm, Sweden |
 | Hetzner | Servers that run our API, background jobs and backups | Helsinki, Finland |
 | Apple | Sign in with Apple, push notifications, App Store payments | Apple |
+| Google | Continue with Google sign-in (identity provider) | Google |
 | Sentry | Crash and error reports (with personal data removed) | Sentry |
 | TelemetryDeck | Anonymous usage analytics | TelemetryDeck |
 | Resend | Delivers email sign-in codes | Resend |
@@ -216,7 +224,7 @@ settings, devices, notification history, reading activity, interest weights, rea
 taste-group membership, Today and recap progress, streaks, trial events, referral records, subscription
 records and your encrypted Apple token. Your story reports and offer-code redemptions stay, without any
 link to you. We then revoke Foretoken's Sign in with Apple access and delete your sign-in record at
-Supabase, usually within minutes; if a step fails, we retry automatically. Encrypted backups expire as
+Supabase, including any linked Google sign-in, usually within minutes; if a step fails, we retry automatically. Encrypted backups expire as
 described under Retention.
 
 **Deleting your account does not cancel an App Store subscription.** Cancel it in iOS Settings > [your
