@@ -10,11 +10,18 @@ To help us find your account, include your Support ID: in the app, open Profile 
 **Do I need an account?**
 No sign-in is needed. Foretoken creates a guest account when you first open it, and you can start your
 free trial from it. Your follows, saves, alert settings and subscription are kept in that guest account.
-Sign in with Apple or with an email code if you want to keep them across devices or after reinstalling. Unused guest accounts are deleted after 90 days.
+Sign in with Apple, Google or an email code if you want to keep them across devices or after reinstalling. Unused guest accounts are deleted after 90 days.
 
 **How do I sign in?**
-Open Profile and tap **Sign in to keep your saves**, then choose Sign in with Apple or Email code.
-Everything you did as a guest moves into your account.
+Open Profile and tap **Sign in to keep your saves**, then choose Sign in with Apple, **Continue with
+Google** or **Continue with email**. Everything you did as a guest moves into your account. If you already
+have an account (for example from another iPhone), sign in the same way and your guest data is merged into it.
+
+**I used Continue with Google. What does Foretoken get from Google?**
+Only your Google account id, email address, name and profile picture link, which our sign-in provider
+(Supabase) keeps with your sign-in record. We never see your Google password and get no access to Gmail,
+Drive, contacts or anything else. You can remove Foretoken in your Google Account under Security > Your
+connections to third-party apps & services.
 
 ## Alerts
 
