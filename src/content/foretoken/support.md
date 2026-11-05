@@ -19,7 +19,7 @@ have an account (for example from another iPhone), sign in the same way and your
 
 **I used Continue with Google. What does Foretoken get from Google?**
 Only your Google account id, email address, name and profile picture link, which our sign-in provider
-(Supabase) keeps with your sign-in record. We never see your Google password and get no access to Gmail,
+(Supabase) keeps with your sign-in record. The name shows at the top of Profile; tap it to change it. We never see your Google password and get no access to Gmail,
 Drive, contacts or anything else. You can remove Foretoken in your Google Account under Security > Your
 connections to third-party apps & services.
 
