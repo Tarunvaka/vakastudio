@@ -142,6 +142,13 @@ account id to Apple with the purchase (as the "app account token") so that a pur
 account. We also keep, for 90 days, a log of Apple's subscription notifications that contains Apple's
 transaction identifiers but not our account id.
 
+We use RevenueCat to see subscription analytics (for example how many people subscribe or renew). After
+our server has checked a purchase, it sends RevenueCat our account id (a random identifier, never your
+name or email), the product and Apple's signed record of the transaction (transaction identifiers, price,
+currency, dates and App Store country). The app itself contains no RevenueCat code.
+RevenueCat does not get your name, email, device identifiers or reading activity, and we do not use it for
+advertising or tracking.
+
 ## Push notifications
 
 If you allow notifications, the app registers a push token with us and we send alerts through Apple Push
@@ -174,6 +181,7 @@ for the purpose listed.
 | Supabase | Database and sign-in | Amazon Web Services, Stockholm, Sweden |
 | Hetzner | Servers that run our API, background jobs and backups | Helsinki, Finland |
 | Apple | Sign in with Apple, push notifications, App Store payments | Apple |
+| RevenueCat | Subscription analytics: receives our account id and Apple's transaction data for purchases; no tracking, no ads | RevenueCat |
 | Google | Continue with Google sign-in (identity provider) | Google |
 | Sentry | Crash and error reports (with personal data removed) | Sentry |
 | TelemetryDeck | Anonymous usage analytics | TelemetryDeck |
@@ -208,6 +216,7 @@ for any advertising.
 | Trial events | 400 days, or until you delete your account |
 | Offer-code redemptions | 25 months; the link to you is removed when you delete your account |
 | Apple subscription notification log (no account id) | 90 days |
+| Subscription analytics copy at RevenueCat (account id and Apple's transaction data) | Until you ask us to delete it (see Deletion) |
 | Story report notes | Removed 180 days after we resolve the report; the report itself loses its link to you when you delete your account |
 | Merged guest records | 30 days after the merge |
 | Deletion records (account id and status only) | 30 days after the deletion completes |
@@ -229,6 +238,9 @@ records and your encrypted Apple token. Your story reports and offer-code redemp
 link to you. We then revoke Foretoken's Sign in with Apple access and delete your sign-in record at
 Supabase, including any linked Google sign-in, usually within minutes; if a step fails, we retry automatically. Encrypted backups expire as
 described under Retention.
+
+RevenueCat keeps its copy of your purchase records, linked only to your deleted account id; write to
+support@vakastudio.com and we will delete it there too.
 
 **Deleting your account does not cancel an App Store subscription.** Cancel it in iOS Settings > [your
 name] > Subscriptions. After deleting, you can keep using the app as a new guest.
