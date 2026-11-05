@@ -5,8 +5,10 @@ Version 1.0 · Effective November 6, 2026
 These Terms of Use ("Terms") govern your use of the Foretoken iPhone app and its web pages
 ("Foretoken"). Foretoken is operated by Nageswararao Vaka, Palakol, Andhra Pradesh, India ("we", "us"). Contact: **support@vakastudio.com**.
 
-By downloading or using Foretoken you agree to these Terms and to our Privacy Policy
-(https://vakastudio.com/foretoken/privacy). If you do not agree, do not use Foretoken.
+You accept these Terms and our Privacy Policy (https://vakastudio.com/foretoken/privacy) when you
+tick the box "I agree to the Terms of Use and Privacy Policy and confirm I'm 18 or older" and tap
+**Continue** at the start of the app. We keep a record of which versions you accepted and when. By
+using Foretoken you also agree to these Terms. If you do not agree, do not use Foretoken.
 
 ## 1. Who may use Foretoken
 
@@ -144,8 +146,8 @@ We may add, change or remove features, and we may suspend or end Foretoken. If w
 tell you in the app and stop renewals through Apple.
 
 We may update these Terms. Each version is dated. If a change is material, we will tell you in the app
-before it takes effect. If you keep using Foretoken after the change takes effect, you accept the new
-Terms; if you do not agree, stop using Foretoken and delete your account.
+before it takes effect, and the app will ask you to accept the new version by ticking the box and
+tapping Continue again. If you do not agree, stop using Foretoken and delete your account.
 
 ## 12. Ending your use
 
