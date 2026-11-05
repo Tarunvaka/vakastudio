@@ -43,7 +43,8 @@ Contact for all privacy questions and requests: **support@vakastudio.com**.
 | Notification history: which stories and other notifications we sent you, and when you read or opened them | To show your notifications inbox and apply your daily limit | Yes |
 | Email address, if you sign in with an email code | To sign you in | Yes |
 | Apple user identifier and the email Apple shares with us (your real address or a private relay address), if you use Sign in with Apple | To sign you in | Yes |
-| Google account identifier, email address, name and profile picture link that Google shares with us, if you use Continue with Google | To sign you in (we do not show or otherwise use your name or picture) | Yes |
+| Google account identifier, email address, name and profile picture link that Google shares with us, if you use Continue with Google | To sign you in, and the name to greet you in Profile (we do not use your picture) | Yes |
+| Your name: the one Google or Apple shares when you sign in, or the one you type when the app asks "What should we call you?" (you can skip it, and change it in Profile) | To show it at the top of Profile on your devices | Yes |
 | Sign in with Apple refresh token, stored encrypted | Only to revoke Foretoken's access at Apple when you delete your account | Yes |
 | Subscription records, if you subscribe: product, status, renewal and expiry dates, trial details, App Store country and Apple's transaction identifiers; trial events (for example "reminder sent"); offer codes you redeem | To confirm your Premium access, send your trial reminder and count offer campaigns | Yes |
 | Referral code and referral status, if referrals are offered and you use them | To give both people the referral reward | Yes |
@@ -51,7 +52,7 @@ Contact for all privacy questions and requests: **support@vakastudio.com**.
 | Crash and performance reports: technical details such as the error, device model, iOS and app version | To find and fix bugs | No |
 | Anonymous usage events, such as "app opened", "story shared" or "paywall shown", with fixed values only | To understand which features are used | No |
 
-We do not collect your name (except the name Google shares if you choose Continue with Google), phone number, postal address, contacts, photos, precise or approximate
+We do not collect your name unless you sign in (above), and we do not collect your phone number, postal address, contacts, photos, precise or approximate
 location, browsing history, search history, health data or payment card details.
 
 Please do not put personal information in a story report note.
@@ -93,8 +94,10 @@ Apple's in-app browser, and that site's own privacy policy applies.
 - **Guest account.** On first launch the app signs in anonymously with Supabase, our sign-in provider.
   Your follows, saves, settings and subscription belong to this guest account.
 - **Signing in is optional.** You can sign in with Apple, continue with Google or use a one-time code sent
-  to your email. With Sign in with Apple we ask only for your email address, never your name, and you can
-  choose Apple's Hide My Email. Email codes are delivered by Resend.
+  to your email. With Sign in with Apple we ask for your name and email address; Apple shares the name
+  only the first time, you can edit it on Apple's sheet, and you can choose Apple's Hide My Email. Email
+  codes are delivered by Resend. Your name is kept with your sign-in record at Supabase and shown only to
+  you, at the top of Profile.
 - **Continue with Google.** Google shares your Google account identifier, email address, name and profile
   picture link with us; Supabase stores them with your sign-in record. We ask Google for nothing else
   (no contacts, Drive, Gmail or other Google data), and we do not keep Google access or refresh tokens:
