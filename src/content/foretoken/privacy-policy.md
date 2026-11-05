@@ -144,8 +144,8 @@ transaction identifiers but not our account id.
 
 We use RevenueCat to see subscription analytics (for example how many people subscribe or renew). After
 our server has checked a purchase, it sends RevenueCat our account id (a random identifier, never your
-name or email), Apple's transaction identifier and the product; RevenueCat then reads the purchase details
-(price, currency, dates, App Store country) from Apple. The app itself contains no RevenueCat code.
+name or email), the product and Apple's signed record of the transaction (transaction identifiers, price,
+currency, dates and App Store country). The app itself contains no RevenueCat code.
 RevenueCat does not get your name, email, device identifiers or reading activity, and we do not use it for
 advertising or tracking.
 
