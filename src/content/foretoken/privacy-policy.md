@@ -39,6 +39,7 @@ Contact for all privacy questions and requests: **support@vakastudio.com**.
 | Alert settings: alert types, daily limit, quiet hours, keywords | To decide which alerts to send you and when | Yes |
 | Time zone | To respect your quiet hours and daily alert limit | Yes |
 | App Store country, device region setting and the region we derive (India, or United States rules for every other country) | To apply the right regional rules to content and prices | Yes |
+| Your agreement to the Terms of Use and this Privacy Policy: which versions you accepted, when, and that you confirmed you are 18 or older (ticked at the start of the app); a record of each acceptance | To show that you agreed and confirmed your age, and to ask again when the Terms change | Yes |
 | Push token, push environment, app version and iOS version | To deliver alerts through Apple's push service | Yes |
 | Notification history: which stories and other notifications we sent you, and when you read or opened them | To show your notifications inbox and apply your daily limit | Yes |
 | Email address, if you sign in with an email code | To sign you in | Yes |
@@ -212,6 +213,7 @@ for any advertising.
 | Push ranking decisions | 14 days |
 | Today in AI progress | 60 days |
 | Recap views | 90 days |
+| Terms and Privacy acceptance records (versions, time, 18+ confirmation) | Until you delete your account |
 | Subscription records | Until you delete your account |
 | Trial events | 400 days, or until you delete your account |
 | Offer-code redemptions | 25 months; the link to you is removed when you delete your account |
@@ -248,7 +250,8 @@ name] > Subscriptions. After deleting, you can keep using the app as a new guest
 ## Children
 
 Foretoken is intended for people aged 18 and over. It is not directed at children, and we do not
-knowingly collect personal data from anyone under 18. If you believe a person under 18 has used
+knowingly collect personal data from anyone under 18. Before you use Foretoken, the app asks you to confirm that you are 18
+or older, and we keep a record of that confirmation. If you believe a person under 18 has used
 Foretoken, contact us and we will delete the data.
 
 ## Your rights
